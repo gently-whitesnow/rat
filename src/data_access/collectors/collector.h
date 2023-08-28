@@ -1,6 +1,6 @@
 #pragma once
 
-#include <models/i_dto.h>
+#include <models/dto.h>
 #include <models/result.h>
 
 class ICollector {

@@ -1,4 +1,4 @@
-#include "i_collector.h"
+#include "collector.h"
 
 ICollector::ICollector(int collectionSecondsInterval) : _collectionSecondsInterval(collectionSecondsInterval) {
     _lastCollectionTime = std::chrono::system_clock::now() - std::chrono::seconds(_collectionSecondsInterval);

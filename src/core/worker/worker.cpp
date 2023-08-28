@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 
-#include <data_access/collectors/i_collector.h>
-#include <data_access/senders/i_sender.h>
+#include <data_access/collectors/collector.h>
+#include <data_access/senders/sender.h>
 
 #include "worker.h"
 

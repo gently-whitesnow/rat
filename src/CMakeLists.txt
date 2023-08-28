@@ -7,7 +7,7 @@ target_sources(rat PRIVATE
     ${all_headers}
     core/worker/worker.cpp
     data_access/collectors/example_collector/example_collector.cpp
-    data_access/collectors/i_collector.cpp
+    data_access/collectors/collector.cpp
     data_access/senders/example_sender/example_sender.cpp
     main.cpp
 )

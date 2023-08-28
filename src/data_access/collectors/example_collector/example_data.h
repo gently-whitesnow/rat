@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include <models/i_dto.h>
+#include <models/dto.h>
 
 class ExampleData : public IDto {
    public:

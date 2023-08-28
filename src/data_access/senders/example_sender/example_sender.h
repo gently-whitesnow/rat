@@ -1,6 +1,6 @@
 #pragma once
-#include <models/i_dto.h>
-#include <data_access/senders/i_sender.h>
+#include <models/dto.h>
+#include <data_access/senders/sender.h>
 
 class ExampleSender : public ISender {
    public:

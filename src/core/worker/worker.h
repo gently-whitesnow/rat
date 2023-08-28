@@ -2,9 +2,9 @@
 
 #include <iostream>
 
-#include <data_access/collectors/i_collector.h>
-#include <data_access/senders/i_sender.h>
-#include <models/i_dto.h>
+#include <data_access/collectors/collector.h>
+#include <data_access/senders/sender.h>
+#include <models/dto.h>
 
 class Worker {
    public:

@@ -1,5 +1,5 @@
 #pragma once
-#include <data_access/collectors/i_collector.h>
+#include <data_access/collectors/collector.h>
 
 class ExampleCollector : public ICollector {
    public:

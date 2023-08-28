@@ -1,7 +1,7 @@
-#include "../i_collector.h"
+#include "../collector.h"
 #include "example_collector.h"
 
-#include <models/i_dto.h>
+#include <models/dto.h>
 #include <models/result.h>
 #include "example_data.h"
 
