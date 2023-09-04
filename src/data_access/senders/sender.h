@@ -2,6 +2,9 @@
 
 #include <models/dto.h>
 
+#include <memory>
+#include <vector>
+
 class ISender {
    public:
     virtual ~ISender(){}

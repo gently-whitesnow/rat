@@ -3,6 +3,9 @@
 #include <models/dto.h>
 #include <models/result.h>
 
+#include <memory>
+#include <chrono>
+
 class ICollector {
    public:
     ICollector(int collectionSecondsInterval);
