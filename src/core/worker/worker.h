@@ -16,5 +16,5 @@ class Worker {
    private:
     std::vector<std::unique_ptr<ICollector>> _collectors;
     std::vector<std::unique_ptr<ISender>> _senders;
-    std::vector<std::unique_ptr<IDto>> _models;
+    std::vector<Result<std::unique_ptr<IDto>>> _models;
 };

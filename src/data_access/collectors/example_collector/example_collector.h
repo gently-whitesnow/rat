@@ -3,7 +3,7 @@
 
 class ExampleCollector : public ICollector {
    public:
-    ExampleCollector(int collectionSecondsInterval);
+    ExampleCollector(int collectionSecondsInterval, std::string collectorName);
 
     Result<std::unique_ptr<IDto>> Collect() override;
 };

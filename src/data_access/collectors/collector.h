@@ -5,15 +5,17 @@
 
 class ICollector {
    public:
-    ICollector(int collectionSecondsInterval);
-    virtual Result<std::unique_ptr<IDto>> Collect() = 0;
+    ICollector(int collectionSecondsInterval, std::string collectorName);
+    Result<std::unique_ptr<IDto>> TryCollect();
 
-    virtual ~ICollector(){}
+    virtual ~ICollector() {}
 
-   protected:
+   private:
     bool IsTimeToCollect();
     std::chrono::time_point<std::chrono::system_clock> _lastCollectionTime;
+    virtual Result<std::unique_ptr<IDto>> Collect() = 0;
 
    private:
     int _collectionSecondsInterval = 3600;
+    std::string _collectorName;
 };

@@ -1,10 +1,11 @@
 #pragma once
-#include <models/dto.h>
 #include <data_access/senders/sender.h>
+#include <models/dto.h>
+#include <models/result.h>
 
 class ExampleSender : public ISender {
    public:
     ExampleSender();
 
-    void Send(const std::vector<std::unique_ptr<IDto>>& dtoVectors) noexcept override;
+    void Send(const std::vector<Result<std::unique_ptr<IDto>>>& resultsVector) noexcept override;
 };

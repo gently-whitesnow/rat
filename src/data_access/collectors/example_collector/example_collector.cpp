@@ -1,19 +1,18 @@
-#include "../collector.h"
 #include "example_collector.h"
 
 #include <models/dto.h>
 #include <models/result.h>
+#include <models/result_status.h>
+
+#include <string>
+
+#include "../collector.h"
 #include "example_data.h"
 
-ExampleCollector::ExampleCollector(int collectionSecondsInterval)
-    : ICollector(collectionSecondsInterval){};
+ExampleCollector::ExampleCollector(int collectionSecondsInterval, std::string collectorName)
+    : ICollector(collectionSecondsInterval, collectorName){};
 
 Result<std::unique_ptr<IDto>> ExampleCollector::Collect() {
-    if (!IsTimeToCollect()) {
-        return Result<std::unique_ptr<IDto>>(false);
-    }
-
-    _lastCollectionTime = std::chrono::system_clock::now();
-
-    return Result<std::unique_ptr<IDto>>(std::make_unique<ExampleData>(100));
+    return Result<std::unique_ptr<IDto>>(
+        std::make_unique<ExampleData>("Example data"));
 };

@@ -1,17 +1,34 @@
 #pragma once
 
-template <typename T>
+#include <string>
+
+#include "result_status.h"
+
+template <typename TValue>
 class Result {
    public:
-    explicit Result(T&& value) : _value(std::move(value)), _success(true) {}
+    explicit Result(TValue&& value)
+        : _value(std::move(value)), _status(ResultStatus::Success) {}
 
-    explicit Result(bool success) : _success(success) {}
+    explicit Result(ResultStatus status) : _status(status) {}
 
-    T&& ReleaseValue() { return std::move(_value); }
+    explicit Result(const ResultStatus status, const std::string& errorMessage)
+        : _status(status), _errorMessage(errorMessage) {}
 
-    bool IsSuccess() const { return _success; }
+    TValue&& ReleaseValue() { return std::move(_value); }
+
+    const TValue& GetValue() const { return _value; }
+
+    bool IsSuccess() const { return _status == ResultStatus::Success; }
+
+    bool IsReady() const { return _status != ResultStatus::NotReady; }
+
+    const ResultStatus Status() const { return _status; }
+
+    const std::string& ErrorMessage() const { return _errorMessage; }
 
    private:
-    T _value;
-    bool _success;
+    TValue _value;
+    ResultStatus _status;
+    std::string _errorMessage;
 };
