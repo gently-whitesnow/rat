@@ -32,8 +32,7 @@ Result<std::unique_ptr<IDto>> DfCollector::Collect() {
             std::make_unique<DfData>(outputResult.ReleaseValue()));
     }
 
-    auto ans = GetFilteredString(outputResult.ReleaseValue());
-    return Result<std::unique_ptr<IDto>>(std::make_unique<DfData>(ans));
+    return Result<std::unique_ptr<IDto>>(std::make_unique<DfData>(GetFilteredString(outputResult.ReleaseValue())));
 };
 
 std::string DfCollector::GetFilteredString(const std::string& rawString) {
