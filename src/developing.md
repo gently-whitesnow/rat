@@ -24,6 +24,7 @@ make
 ```
 cmd + shift + p
 Configure cmake (там надо выбрать конфигурацию)
+
 ## Debug
 CodeLLDB
 https://github.com/vadimcn/codelldb/blob/master/MANUAL.md
