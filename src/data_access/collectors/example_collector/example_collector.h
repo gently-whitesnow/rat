@@ -1,9 +1,9 @@
 #pragma once
-#include <data_access/collectors/collector.h>
+#include <data_access/collectors/base_collector.h>
 
-class ExampleCollector : public ICollector {
+class ExampleCollector : public BaseCollector {
    public:
-    ExampleCollector(int collectionSecondsInterval);
+    ExampleCollector(uint32_t collectionSecondsInterval, const std::string& collectorName);
 
-    Result<std::unique_ptr<IDto>> Collect() override;
+    Result<std::unique_ptr<BaseDto>> Collect() override;
 };
