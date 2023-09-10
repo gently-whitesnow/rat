@@ -1,10 +1,10 @@
 #pragma once
 #include <string>
 
-class IDto {
+class BaseDto {
    public:
-    IDto(std::string data) : _data(data) {}
-    virtual ~IDto() {}
+    BaseDto(std::string data) : _data(data) {}
+    virtual ~BaseDto() {}
 
     const std::string& GetStringifyData() const { return _data; }
 

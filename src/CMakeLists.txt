@@ -10,7 +10,7 @@ target_sources(rat PRIVATE
     data_access/collectors/example_collector/example_collector.cpp
     data_access/collectors/unix/df_collector/df_collector.cpp
     data_access/collectors/unix/system_executor.cpp
-    data_access/collectors/collector.cpp
+    data_access/collectors/base_collector.cpp
     data_access/senders/example_sender/example_sender.cpp
     main.cpp
 )

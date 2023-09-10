@@ -1,10 +1,10 @@
 #pragma once
 
-#include <models/dto.h>
+#include <models/base_dto.h>
 
 #include <string>
 
-class ExampleData : public IDto {
+class ExampleData : public BaseDto {
    public:
-    ExampleData(const std::string& exampleData) : IDto(exampleData){};
+    ExampleData(const std::string& exampleData) : BaseDto(exampleData){};
 };

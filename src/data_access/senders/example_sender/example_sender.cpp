@@ -8,7 +8,7 @@
 ExampleSender::ExampleSender(){};
 
 void ExampleSender::Send(
-    const std::vector<Result<std::unique_ptr<IDto>>>& resultsVector) noexcept {
+    const std::vector<Result<std::unique_ptr<BaseDto>>>& resultsVector) noexcept {
     for (const auto& result : resultsVector) {
         if (result.IsSuccess()) {
             std::cout << result.GetValue()->GetStringifyData() << std::endl;

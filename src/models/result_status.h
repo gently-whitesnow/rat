@@ -1,3 +1,3 @@
 #pragma once
 
-enum ResultStatus { Success, NotReady, InternalError };
+enum class ResultStatus { Success, NotReady, InternalError };
