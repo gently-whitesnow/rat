@@ -1,17 +1,10 @@
 #pragma once
 
+#include <models/base_dto.h>
+
 #include <string>
 
-#include <models/dto.h>
-
-class ExampleData : public IDto {
+class ExampleData : public BaseDto {
    public:
-    ExampleData(int integerData) : _integerData(integerData){};
-
-    std::string GetStringifyData() override {
-        return std::to_string(_integerData);
-    }
-
-   private:
-    int _integerData;
+    ExampleData(const std::string& exampleData) : BaseDto(exampleData){};
 };
